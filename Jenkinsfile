@@ -22,6 +22,8 @@ node {
     stage('package') {
        sh ' mvn package'
         }
-    
+    stage('deploy') {
+       sh ' mvn deploy'
+        }   
 }
 
