@@ -15,9 +15,9 @@ node {
        sh ' mvn compile'
         }
     stage('Sonar scan') {
-       sh mvn sonar:sonar \
+       sh ' mvn sonar:sonar \
   -Dsonar.host.url=http://34.125.50.26:9000 \
-  -Dsonar.login=e4e65c6f4898f7fd9e230cfc192e2c6a51a6a145
+  -Dsonar.login=e4e65c6f4898f7fd9e230cfc192e2c6a51a6a145 '
         }
 
     stage('test') {
